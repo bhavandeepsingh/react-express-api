@@ -11,5 +11,6 @@ module.exports = (req, res, next) => {
    */
   req.app.use("/v1", require("./api/v1"));
   req.app.use("/v1/books", authenticate, require("./api/books"));
+  req.app.use("/v1/organizations", authenticate, require("./api/organizations"));
   next();
 };
