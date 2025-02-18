@@ -4,8 +4,8 @@ init();
 
 const fetchOrganizations = async () => {
   try{
-    const  data = await Organizations.getOrganizations();
-    if(data.code == "ok"){
+    const  data = await Organizations.getOrganizations();    
+    if(data.code.toLocaleLowerCase() == "ok"){
       return data.organizations
     }
   }catch(err){
